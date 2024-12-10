@@ -1,0 +1,114 @@
+{
+    "medications": {
+        "dolo 650": {
+            "condition": "fever",
+            "dosage": "1 tablet every 6 hours",
+            "side_effects": "Nausea, Dizziness"
+        },
+        "paracetamol": {
+            "condition": "fever, headache",
+            "dosage": "500 mg 4 times a day",
+            "side_effects": "Liver issues, Stomach upset"
+        },
+        "ibuprofen": {
+            "condition": "pain relief, inflammation",
+            "dosage": "400 mg every 6-8 hours",
+            "side_effects": "Stomach pain, Nausea"
+        },
+        "aspirin": {
+            "condition": "fever, pain, inflammation",
+            "dosage": "325-650 mg every 4-6 hours",
+            "side_effects": "Gastrointestinal bleeding, Allergic reactions"
+        },
+        "amoxicillin": {
+            "condition": "bacterial infections",
+            "dosage": "250-500 mg every 8 hours",
+            "side_effects": "Nausea, Diarrhea, Allergic reactions"
+        },
+        "cetirizine": {
+            "condition": "allergies, hay fever",
+            "dosage": "10 mg once daily",
+            "side_effects": "Drowsiness, Dry mouth"
+        },
+        "metformin": {
+            "condition": "type 2 diabetes",
+            "dosage": "500-2000 mg daily",
+            "side_effects": "Nausea, Diarrhea, Stomach upset"
+        },
+        "loratadine": {
+            "condition": "allergic reactions",
+            "dosage": "10 mg once daily",
+            "side_effects": "Headache, Drowsiness"
+        },
+        "amlodipine": {
+            "condition": "high blood pressure",
+            "dosage": "2.5-10 mg once daily",
+            "side_effects": "Swelling, Flushing, Palpitations"
+        },
+        "omeprazole": {
+            "condition": "acid reflux, ulcers",
+            "dosage": "20-40 mg once daily",
+            "side_effects": "Headache, Nausea, Diarrhea"
+        },
+        "ciprofloxacin": {
+            "condition": "bacterial infections",
+            "dosage": "250-750 mg every 12 hours",
+            "side_effects": "Nausea, Diarrhea, Dizziness"
+        },
+        "lisinopril": {
+            "condition": "high blood pressure, heart failure",
+            "dosage": "10-40 mg once daily",
+            "side_effects": "Cough, Dizziness, Elevated potassium"
+        },
+        "hydrochlorothiazide": {
+            "condition": "high blood pressure, edema",
+            "dosage": "12.5-50 mg once daily",
+            "side_effects": "Dizziness, Dehydration, Electrolyte imbalance"
+        },
+        "simvastatin": {
+            "condition": "high cholesterol",
+            "dosage": "5-40 mg once daily in the evening",
+            "side_effects": "Muscle pain, Liver damage"
+        },
+        "prednisone": {
+            "condition": "inflammation, autoimmune disorders",
+            "dosage": "5-60 mg daily, depending on condition",
+            "side_effects": "Weight gain, Mood changes, Increased blood sugar"
+        },
+        "levothyroxine": {
+            "condition": "hypothyroidism",
+            "dosage": "1.6 mcg/kg once daily",
+            "side_effects": "Weight loss, Increased heart rate, Anxiety"
+        },
+        "albuterol": {
+            "condition": "asthma, bronchospasm",
+            "dosage": "90-180 mcg (2 puffs) every 4-6 hours as needed",
+            "side_effects": "Tremors, Nervousness, Increased heart rate"
+        },
+        "furosemide": {
+            "condition": "edema, high blood pressure",
+            "dosage": "20-80 mg once daily",
+            "side_effects": "Dehydration, Electrolyte imbalance"
+        },
+        "metoprolol": {
+            "condition": "high blood pressure, heart issues",
+            "dosage": "25-100 mg once daily",
+            "side_effects": "Dizziness, Fatigue, Cold hands"
+        },
+        "venlafaxine": {
+            "condition": "depression, anxiety",
+            "dosage": "75-375 mg daily",
+            "side_effects": "Nausea, Dizziness, Insomnia"
+        },
+        "atorvastatin": {
+            "condition": "high cholesterol",
+            "dosage": "10-80 mg once daily",
+            "side_effects": "Muscle pain, Elevated liver enzymes"
+        },
+        "clopidogrel": {
+            "condition": "blood clots, cardiovascular issues",
+            "dosage": "75 mg once daily",
+            "side_effects": "Bleeding, Rash"
+        }
+    }
+}

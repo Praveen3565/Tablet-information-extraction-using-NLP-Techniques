@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablet Info App</title>
+    <style>
+        /* Basic styling for layout */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: #f0f2f5;
+        }
+        
+        h1 {
+            color: #333;
+        }
+        
+        form {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        label {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #555;
+        }
+        
+        input[type="text"] {
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 300px;
+            transition: border-color 0.3s;
+        }
+        
+        input[type="text"]:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+        
+        button {
+            padding: 10px 15px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+        
+        #result {
+            max-width: 600px;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            color: #333;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tablet Info Search</h1>
+    <form id="tablet-search-form" action="/search" method="POST">
+        <label for="tablet_name">Enter Tablet Name:</label>
+        <input type="text" id="tablet_name" name="tablet_name" placeholder="e.g., Aspirin" required>
+        <button type="submit">Search</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        const form = document.getElementById('tablet-search-form');
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault(); // Prevent the default form submission
+            
+            const formData = new FormData(form);
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = "<p>Loading...</p>"; // Show loading message
+            
+            try {
+                const response = await fetch('/search', {
+                    method: 'POST',
+                    body: formData,
+                });
+                
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+
+                const data = await response.json();
+                resultDiv.innerHTML = ''; // Clear loading message
+
+                if (data.error) {
+                    resultDiv.innerHTML = `<p>${data.error}</p>`;
+                } else {
+                    resultDiv.innerHTML = `
+                        <h2>Tablet Info:</h2>
+                        <ul>
+                            <li><strong>Condition:</strong> ${data.condition}</li>
+                            <li><strong>Dosage:</strong> ${data.dosage}</li>
+                            <li><strong>Side Effects:</strong> ${data.side_effects}</li>
+                        </ul>
+                    `;
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `<p>Error: Unable to fetch data.</p>`;
+                console.error("Error:", error);
+            }
+        });
+    </script>
+</body>
+</html>
